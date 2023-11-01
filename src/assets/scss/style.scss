@@ -1,0 +1,356 @@
+// color variants
+@import 'themes-vars.module.scss';
+
+// third-party
+@import '~react-perfect-scrollbar/dist/css/styles.css';
+
+// ==============================|| LIGHT BOX ||============================== //
+.slick-arrow:before {
+    color: $grey500;
+}
+
+// ==============================|| APEXCHART ||============================== //
+
+.apexcharts-legend-series .apexcharts-legend-marker {
+    margin-right: 8px;
+}
+
+// ==============================|| PERFECT SCROLLBAR ||============================== //
+
+.scrollbar-container {
+    .ps__rail-y {
+
+        &:hover>.ps__thumb-y,
+        &:focus>.ps__thumb-y,
+        &.ps--clicking .ps__thumb-y {
+            background-color: $grey500;
+            width: 5px;
+        }
+    }
+
+    .ps__thumb-y {
+        background-color: $grey500;
+        border-radius: 6px;
+        width: 5px;
+        right: 0;
+    }
+}
+
+.scrollbar-container.ps,
+.scrollbar-container>.ps {
+    &.ps--active-y>.ps__rail-y {
+        width: 5px;
+        background-color: transparent !important;
+        z-index: 999;
+
+        &:hover,
+        &.ps--clicking {
+            width: 5px;
+            background-color: transparent;
+        }
+    }
+
+    &.ps--scrolling-y>.ps__rail-y,
+    &.ps--scrolling-x>.ps__rail-x {
+        opacity: 0.4;
+        background-color: transparent;
+    }
+}
+
+.css-celovh-MuiFormHelperText-root {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+
+.css-l0rs3e-MuiPaper-root-MuiAlert-root {
+    color: #ffffff !important;
+}
+
+// ==============================|| ANIMATION KEYFRAMES ||============================== //
+
+@keyframes c {
+    50% {
+        transform: translateY(-40px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    53%,
+    to {
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        transform: translateZ(0);
+    }
+
+    40%,
+    43% {
+        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        transform: translate3d(0, -5px, 0);
+    }
+
+    70% {
+        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        transform: translate3d(0, -7px, 0);
+    }
+
+    80% {
+        transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        transform: translateZ(0);
+    }
+
+    90% {
+        transform: translate3d(0, -2px, 0);
+    }
+}
+
+@keyframes slideY {
+
+    0%,
+    50%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    25% {
+        transform: translateY(-10px);
+    }
+
+    75% {
+        transform: translateY(10px);
+    }
+}
+
+@keyframes slideX {
+
+    0%,
+    50%,
+    100% {
+        transform: translateX(0px);
+    }
+
+    25% {
+        transform: translateX(-10px);
+    }
+
+    75% {
+        transform: translateX(10px);
+    }
+}
+
+.apexcharts-tooltip {
+    z-index: 1300 !important;
+}
+
+.tooltip-content {
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.w60px {
+    display: block;
+    width: 60px;
+}
+
+.w100px {
+    display: block;
+    width: 100px;
+}
+
+.w150px {
+    display: block;
+    width: 150px;
+}
+
+.dashboard__content--header {
+    margin-bottom: 58px;
+}
+
+.dashboard__container {
+    height: 100%;
+}
+
+.dashboard__container .MuiGrid-root {
+    padding: 0 80px;
+}
+
+.image__dashboard {
+    max-width: 100%;
+    height: auto;
+}
+
+.dashboard__content--body h2 {
+    margin-bottom: 24px;
+}
+
+.dashboard__content--body h6 {
+    opacity: 0.8;
+}
+
+.dashboard__content--body h6 strong {
+    opacity: 1;
+}
+
+.image__dashboard {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.MuiInputLabel-asterisk {
+    color: red;
+}
+
+[id='menu-timeSendMail.day'] .MuiPaper-root {
+    max-width: 274px !important;
+}
+
+[id='menu-timeSendMail.day'] .MuiList-root {
+    color: red
+}
+
+[id="menu-timeSendMail.day"] .MuiPaper-root {
+    max-width: 274px !important;
+}
+
+[id="menu-timeSendMail.day"] .MuiList-root {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+[id="menu-timeSendMail.day"] .MuiList-root li:first-child {
+    width: 100%;
+    justify-content: center;
+}
+
+.react-multi-email {
+    flex: 1 1 auto;
+    align-content: center;
+    height: 100%;
+    border: none;
+}
+
+.react-multi-email>input {
+    padding: 0 !important;
+    background: transparent;
+}
+
+@media only screen and (max-width: 500px) {
+    [id='menu-timeSendMail.day'] .MuiPaper-root {
+        max-width: 202px !important;
+    }
+
+    [id="menu-timeSendMail.day"] .MuiButtonBase-root {
+        min-height: 25px;
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+.backgroud-select-option {
+    background: #ffff;
+}
+
+.summary-container {
+    .MuiCardHeader-content {
+        span {
+            display: none;
+        }
+    }
+
+    .MuiCardHeader-action {
+        button:nth-child(2) {
+            display: none;
+        }
+    }
+}
+
+.MuiInputBase-root {
+    background: #fff;
+}
+
+.MuiInputBase-root.Mui-disabled {
+    background: #eeeeee;
+}
+
+.personal-detail-1st-col {
+    width: 250px;
+    font-weight: 500
+}
+
+.from-to-date-col {
+    width: 200px;
+    font-weight: 500;
+}
+
+.personal-detail-2rd-col {
+    width: 220px;
+    font-weight: 500
+}
+
+.w-250px {
+    width: 250px
+}
+
+.w-300px {
+    width: 300px;
+}
+
+.vertical-align-top {
+    vertical-align: top;
+}
+
+.w-95px {
+    width: 95px;
+}
+
+.wp-nowrap {
+    white-space: nowrap;
+}
+
+.table-cv {
+    margin-bottom: 15px;
+    overflow: unset;
+
+    & table {
+        border-collapse: collapse;
+    }
+
+    & td,
+    th {
+        border: 1px solid #797979;
+        color: #000
+    }
+}
+
+.required {
+    color: red
+}
+
+[role="presentation"] ~ [role="dialog"] .MuiPaper-root > .MuiCalendarOrClockPicker-root{
+    max-height: 180px;
+    .MuiYearPicker-root {
+        padding: 0;
+    }
+}
+
